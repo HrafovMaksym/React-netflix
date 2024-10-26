@@ -1,0 +1,36 @@
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.titleContainer {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+@media (max-width: 1170px) {
+  .titleContainer {
+    margin: 0 15px;
+  }
+}
+@media (max-width: 1290px) {
+  .container {
+    margin: 0 15px;
+  }
+}

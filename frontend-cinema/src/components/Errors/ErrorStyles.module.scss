@@ -1,0 +1,50 @@
+.root {
+  background-color: black;
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("../../assets/images/SK-en-20240715-POP_SIGNUP_TWO_WEEKS-perspective_WEB_5957b1c5-191a-4854-bee2-9ac215df07d4_large.jpg");
+  color: white;
+  height: 100vh;
+  .flexWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 75vh;
+    gap: 30px;
+    .navBtns {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+  }
+  h1 {
+    margin: 0;
+    font-size: 38px;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.logo {
+  margin-top: 22px;
+  max-width: 130px;
+  width: 130px;
+  fill: red;
+  cursor: pointer;
+}
+.backHome {
+  padding: 10px 55px;
+  color: black;
+  font-size: 20px;
+  background-color: rgb(179, 179, 179);
+  border: 1px solid white;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all ease-in-out 0.4s;
+  &:hover {
+    color: white;
+    background-color: rgb(174, 26, 26);
+  }
+}

@@ -1,0 +1,51 @@
+.root {
+  border-bottom: solid rgba(255, 255, 255, 0.25) 2px;
+}
+
+.film {
+  width: 100%;
+  height: 600px;
+  border: 0px solid black;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+.filmRating {
+  display: flex;
+  gap: 4px;
+
+  .ratingStar {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  .newRatingStar {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+@media (max-width: 700px) {
+  .film {
+    height: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .filmRating {
+    font-size: 17px;
+    .ratingStar {
+      font-size: 20px;
+    }
+    .newRatingStar {
+      font-size: 20px;
+    }
+  }
+}
+@media (max-width: 373px) {
+  .filmRating {
+    font-size: 16px;
+    .ratingStar {
+      font-size: 17px;
+    }
+    .newRatingStar {
+      font-size: 17px;
+    }
+  }
+}

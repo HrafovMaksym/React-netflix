@@ -1,0 +1,172 @@
+.root {
+  margin-top: 40px;
+  position: relative;
+  width: 100%;
+
+  h2 {
+    color: white;
+  }
+
+  .swiper {
+    --swiper-navigation-color: white;
+  }
+}
+.filmCard {
+  width: 300px;
+  height: 150px;
+  position: relative;
+  z-index: 0;
+  border: 1px solid black;
+  cursor: pointer;
+
+  &.visible {
+    border: 1px solid white;
+  }
+
+  &:hover {
+    .titleImg {
+      opacity: 0.7;
+    }
+    .titleCard {
+      display: block;
+    }
+    .favoriteAdd {
+      display: block;
+    }
+  }
+
+  .titleImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+  .titleCard {
+    color: white;
+    display: none;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    right: 10px;
+  }
+  .favoriteAdd {
+    display: none;
+    width: 25px;
+    height: 25px;
+    background-color: inherit;
+    border: 0px solid white;
+    position: absolute;
+    z-index: 5;
+    top: 10px;
+    left: 10px;
+    cursor: default;
+    svg {
+      fill: white;
+    }
+  }
+}
+.description {
+  width: 100%;
+  margin-top: 10px;
+  position: absolute;
+  left: 0;
+  top: 210px;
+  z-index: 15;
+  height: 700px;
+  color: white;
+  background-color: black;
+
+  display: flex;
+  gap: 20px;
+  .text {
+    width: 505px;
+    padding: 10px 0 10px 90px;
+    h1 {
+      margin: 0;
+      font-size: 35px;
+    }
+    .titleInfo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px;
+      margin-bottom: 20px;
+      .rating {
+        text-align: center;
+        font-size: 25px;
+        margin: 5px 0 0 0;
+      }
+    }
+    .moreInfo {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .ratingCount {
+        margin: 0;
+        font-size: 16px;
+      }
+      .date {
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+    .language {
+      margin: 0 0 0 0;
+    }
+    .genres {
+      margin: 15px 0 10px 0;
+    }
+    p {
+      color: rgb(207, 207, 207);
+      font-size: 18px;
+      max-width: 500px;
+    }
+    .comment {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      height: 50px;
+      p {
+        margin: 5px 0 0 0;
+        font-size: 17px;
+        text-align: start;
+      }
+    }
+  }
+  .trailer {
+    width: 800px;
+    height: 500px;
+    object-fit: contain;
+    border: 0px solid black;
+  }
+  .desButtons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .watchBtn {
+    padding: 8px 25px;
+    border-radius: 2px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid white;
+    color: black;
+    font-weight: 550;
+  }
+  .addToFav {
+    padding: 8px 35px;
+    border-radius: 2px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: red;
+    border: 1px solid white;
+    color: white;
+    font-weight: 550;
+    transition: all ease-in-out 0.4s;
+    &:hover {
+      background-color: rgb(175, 19, 19);
+    }
+  }
+}

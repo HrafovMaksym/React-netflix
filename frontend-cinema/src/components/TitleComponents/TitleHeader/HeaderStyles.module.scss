@@ -1,0 +1,90 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../assets/images/SK-en-20240715-POP_SIGNUP_TWO_WEEKS-perspective_WEB_5957b1c5-191a-4854-bee2-9ac215df07d4_large.jpg");
+  background-size: cover;
+  .headerInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+
+  .logo {
+    max-width: 150px;
+    width: 150px;
+    fill: red;
+    cursor: pointer;
+  }
+  .btns {
+    display: flex;
+    gap: 20px;
+  }
+
+  .signBtn {
+    background-color: red;
+    color: white;
+    border: 0px solid white;
+    padding: 9px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 550;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    &:hover {
+      background-color: rgb(175, 19, 19);
+    }
+  }
+
+  .titleText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 80vh;
+    h1 {
+      font-size: 45px;
+      margin: 0 0 20px 0;
+    }
+    p {
+      font-size: 22px;
+      margin: 0 0 20px 0;
+    }
+    form {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
+@media (max-width: 630px) {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 500px) {
+  header {
+    .titleText {
+      h1 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 17px;
+      }
+    }
+  }
+}
+@media (max-width: 430px) {
+  header {
+    .titleText {
+      form {
+        input {
+          width: 350px;
+        }
+      }
+    }
+  }
+}

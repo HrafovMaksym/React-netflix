@@ -1,0 +1,71 @@
+.root {
+  margin-top: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  input {
+    width: 400px;
+    height: 40px;
+    border: 1px whitesmoke solid;
+    background-color: rgb(62, 62, 103);
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    font-size: 17px;
+    outline: none;
+  }
+  .mainInput {
+    width: 400px;
+    height: 40px;
+    color: white;
+    background-color: rgb(62, 62, 103);
+    border: 1px whitesmoke solid;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: all ease-in-out 0.1s;
+    &.errorInput {
+      border: 1px solid rgb(235, 57, 66);
+      outline: 2px solid rgb(235, 57, 66);
+      background-color: rgba(0, 0, 0, 0.134);
+    }
+  }
+  button {
+    color: white;
+    background-color: #ff0000;
+    border: 0px solid white;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 550;
+    cursor: pointer;
+    &:disabled {
+      background-color: rgb(77, 12, 12);
+    }
+    transition: all ease-in-out 0.3s;
+    &:hover {
+      background-color: rgb(175, 19, 19);
+    }
+    a {
+      color: white;
+    }
+  }
+  .error {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    font-size: 20px;
+    top: 63px;
+    margin: 0;
+
+    color: rgb(235, 57, 66);
+    svg {
+      margin-right: 5px;
+      min-width: 19px;
+      min-height: 19px;
+    }
+  }
+}

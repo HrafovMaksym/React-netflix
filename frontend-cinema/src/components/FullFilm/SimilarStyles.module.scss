@@ -1,0 +1,76 @@
+.root {
+  margin-bottom: 30px;
+  border-bottom: solid rgba(255, 255, 255, 0.25) 2px;
+  padding-bottom: 25px;
+  .filmCard {
+    width: 300px;
+    height: 150px;
+    position: relative;
+    z-index: 0;
+    border: 1px solid black;
+    cursor: pointer;
+
+    &.visible {
+      border: 1px solid white;
+    }
+
+    &:hover {
+      .titleImg {
+        opacity: 0.7;
+      }
+      .titleCard {
+        display: block;
+      }
+      .favoriteAdd {
+        display: block;
+      }
+    }
+
+    .titleImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 3px;
+    }
+    .titleCard {
+      color: white;
+      display: none;
+      position: absolute;
+      z-index: 5;
+      bottom: 0;
+      right: 10px;
+    }
+    .favoriteAdd {
+      display: none;
+      width: 25px;
+      height: 25px;
+      background-color: inherit;
+      border: 0px solid white;
+      position: absolute;
+      z-index: 5;
+      top: 10px;
+      left: 10px;
+      cursor: default;
+      svg {
+        fill: white;
+      }
+    }
+    .rating {
+      display: flex;
+      align-items: center;
+
+      background-color: inherit;
+      color: white;
+      position: absolute;
+      z-index: 5;
+      font-size: 20px;
+      top: -5px;
+      right: 10px;
+      cursor: default;
+      svg {
+        width: 20px;
+        fill: #ffd700;
+      }
+    }
+  }
+}

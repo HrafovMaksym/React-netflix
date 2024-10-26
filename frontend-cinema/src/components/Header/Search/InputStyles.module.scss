@@ -1,0 +1,237 @@
+.root {
+  position: relative;
+  .searchInput {
+    width: 0;
+    padding: 8px 24px 8px 5px;
+    border-radius: 25px;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: all ease-in-out 0.3s;
+    background-color: inherit;
+  }
+  .searchInput.open {
+    width: 253px;
+    color: white;
+
+    border-radius: 10px 10px 0 0;
+    padding: 8px 28px 8px 5px;
+    border: 2px solid white;
+  }
+
+  .searchInput.open + .searchBtn:hover {
+    background-color: inherit;
+  }
+
+  .searchInput.open + .searchBtn:hover svg {
+    fill: white;
+  }
+
+  .searchBtn {
+    position: absolute;
+    top: 1px;
+    right: -1px;
+    border-radius: 50%;
+    padding: 2px 2px 0px 2px;
+    border: 0px solid;
+    background-color: inherit;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    &:hover {
+      background-color: white;
+      svg {
+        fill: black;
+      }
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: white;
+    }
+  }
+  .nameBlock {
+    position: absolute;
+    padding: 5px 0 5px 10px;
+    background-color: white;
+    width: 98%;
+    height: 90vh;
+    overflow: scroll;
+    color: black;
+    display: none;
+
+    &.found {
+      display: block;
+    }
+    &.hidden {
+      display: none;
+    }
+    &.notFound {
+      display: block;
+      height: 20vh;
+      width: 97%;
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    .titleNotFound {
+      padding: 30px 5px;
+    }
+    &::-webkit-scrollbar {
+      width: 3px;
+      height: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(179, 179, 179, 0.565);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.62);
+      border-radius: 6px;
+      border: 1px solid rgba(0, 0, 0, 0.62);
+    }
+
+    .cardFilm {
+      color: black;
+      cursor: pointer;
+      display: flex;
+      height: 170px;
+      gap: 10px;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid whitesmoke;
+      box-sizing: border-box;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .poster {
+        width: 120px;
+        height: 150px;
+        object-fit: contain;
+      }
+      .filmInfo {
+        height: 95%;
+        max-height: 95%;
+        overflow: hidden;
+        .title {
+          margin: 0 0 5px 0;
+        }
+        .data {
+          color: rgb(109, 109, 109);
+          margin: 0;
+        }
+        .votes {
+          margin: 0;
+          color: grey;
+        }
+        .highVotes {
+          margin: 0;
+          color: rgb(4, 184, 4);
+        }
+        .description {
+          overflow: hidden;
+          color: rgba(0, 0, 0, 0.664);
+          position: relative;
+
+          line-height: 1.2em;
+
+          max-height: 3.6em;
+
+          padding-right: 1em;
+
+          margin: 5px 0 3px 0;
+        }
+        .seeMore {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1150px) {
+  .root {
+    .searchInput.open {
+      width: 153px;
+    }
+    .titleNotFound {
+      margin: 0;
+      padding: 20px 5px;
+    }
+    .nameBlock {
+      width: 95%;
+      &.notFound {
+        width: 95%;
+      }
+      .titleNotFound {
+        margin: 0;
+        padding: 20px 5px;
+      }
+      .cardFilm {
+        .poster {
+          width: 90px;
+        }
+        .filmInfo {
+          .title {
+            font-size: 16px;
+          }
+          .data {
+            font-size: 13px;
+          }
+          .votes {
+            display: none;
+          }
+          .description {
+            display: none;
+          }
+          .seeMore {
+            margin: 10px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .root {
+    .searchInput.open {
+      width: 120px;
+    }
+
+    .nameBlock {
+      width: 94%;
+      &.notFound {
+        width: 94%;
+      }
+      .titleNotFound {
+        margin: 0;
+        padding: 15px 5px;
+      }
+      .cardFilm {
+        height: 100px;
+        .poster {
+          width: 50px;
+          height: 90px;
+        }
+        .filmInfo {
+          .title {
+            font-size: 16px;
+          }
+          .data {
+            font-size: 13px;
+          }
+          .votes {
+            display: none;
+          }
+          .description {
+            display: none;
+          }
+          .seeMore {
+            margin: 10px 0 0 0;
+          }
+        }
+      }
+    }
+  }
+}

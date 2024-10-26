@@ -1,0 +1,191 @@
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets//images/SK-en-20240715-POP_SIGNUP_TWO_WEEKS-perspective_WEB_5957b1c5-191a-4854-bee2-9ac215df07d4_large.jpg");
+  background-size: cover;
+  .container {
+    max-width: 1157px;
+    margin: 0 auto;
+  }
+  .logo {
+    padding-top: 30px;
+    max-width: 150px;
+    width: 150px;
+    fill: red;
+    cursor: pointer;
+  }
+  .signForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  .block {
+    width: 310px;
+    height: 430px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 0px solid black;
+    border-radius: 5px;
+    padding: 30px 60px;
+  }
+  .formBlock {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      margin-bottom: 25px;
+    }
+    a {
+      color: white;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    p {
+      text-align: center;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+    .mainInput {
+      color: white;
+      font-size: 1rem;
+      padding: 1rem;
+      background-color: inherit;
+      border: 1px solid white;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      &.errorInput {
+        border: 1px solid rgb(235, 57, 66);
+        outline: 2px solid rgb(235, 57, 66);
+      }
+    }
+    .passWrapper {
+      max-width: 260px;
+      position: relative;
+      .passwordInput {
+        margin-bottom: 20px;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid white;
+        color: white;
+        font-size: 1rem;
+        padding: 1rem 2rem 1rem 1rem;
+        background-color: inherit;
+        &.errorInput {
+          border: 1px solid rgb(235, 57, 66);
+          outline: 2px solid rgb(235, 57, 66);
+        }
+      }
+
+      .visibleBtn {
+        position: absolute;
+        background-color: inherit;
+        border-radius: 50px;
+        transition: all ease-in-out 0.3s;
+        cursor: pointer;
+        top: 11px;
+        right: -45px;
+        &:hover {
+          background-color: #888;
+        }
+        svg {
+          padding: 3px 3px 0 3px;
+          width: 22px;
+        }
+      }
+    }
+
+    button {
+      color: white;
+      background-color: red;
+      border: 0px solid white;
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: 550;
+      cursor: pointer;
+      margin-bottom: 30px;
+      transition: all ease-in-out 0.3s;
+      &:hover {
+        background-color: rgb(175, 19, 19);
+      }
+    }
+    .error {
+      display: flex;
+      align-items: center;
+      text-align: start;
+      font-size: 14px;
+      padding: 0;
+      margin: 0 0 15px 0;
+      color: rgb(235, 57, 66);
+      svg {
+        margin-right: 5px;
+        min-width: 16px;
+        min-height: 16px;
+      }
+    }
+    .rootError {
+      width: 97%;
+      padding: 5px;
+      height: 100px;
+      background-color: rgb(216, 157, 49);
+      margin-bottom: 15px;
+      border-radius: 3px;
+      color: rgba(0, 0, 0, 0.753);
+      a {
+        color: rgba(0, 0, 0, 0.753);
+        font-weight: 600;
+      }
+      h3 {
+        margin: 5px 0 5px 0;
+      }
+      p {
+        text-align: start;
+      }
+    }
+    div {
+      span {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+    .checkBox {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 25px;
+      font-size: 17px;
+      & input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      & .checkMark {
+        height: 15px;
+        width: 15px;
+        background-color: inherit;
+        border: 1px solid #888;
+        margin-right: 10px;
+        background-size: cover;
+        background-position: center;
+        transition: all ease-in-out 0.3s;
+      }
+      &:hover .checkMark {
+        border: 1px solid white;
+      }
+      & input:checked ~ .checkMark {
+        border-color: whitesmoke;
+        background-color: whitesmoke;
+        background-image: url("../../assets/images/icons8-галочка-24.png");
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .container {
+      margin: 0 15px;
+    }
+  }
+}

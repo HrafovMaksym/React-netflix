@@ -1,0 +1,45 @@
+.BlockComment {
+  position: relative;
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid white;
+  margin-bottom: 30px;
+  .inputComment {
+    width: 95%;
+    padding: 5px 10px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border: 0px solid white;
+    outline: none;
+  }
+  .btnSend {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    background-color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.158);
+    svg {
+      fill: white;
+      cursor: pointer;
+    }
+  }
+}
+.comment {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+  height: 50px;
+  p {
+    margin: 5px 0 0 0;
+    font-size: 17px;
+    text-align: start;
+  }
+}
+@media (max-width: 435px) {
+  .BlockComment {
+    .inputComment {
+      width: 90%;
+    }
+  }
+}

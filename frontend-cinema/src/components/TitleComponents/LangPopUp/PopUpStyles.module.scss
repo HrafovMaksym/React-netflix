@@ -1,0 +1,88 @@
+.root {
+  position: relative;
+  p {
+    margin: 0;
+    display: block;
+  }
+}
+.activeLangBtn {
+  width: 135px;
+  color: white;
+  background-color: inherit;
+  border: 1px solid white;
+  padding: 7px 16px;
+  border-radius: 5px 5px 0 0;
+  font-size: 14px;
+  font-weight: 550;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  svg:first-child {
+    width: 16px;
+    height: 16px;
+  }
+  svg:last-child {
+    width: 18px;
+    transform: rotate(180deg);
+  }
+}
+.setActiveLangBtn {
+  width: 135px;
+  color: white;
+  background-color: inherit;
+  border: 1px solid white;
+  padding: 7px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 550;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  svg:first-child {
+    width: 16px;
+    height: 16px;
+  }
+  svg:last-child {
+    width: 18px;
+  }
+}
+.langCard {
+  position: absolute;
+  top: 32px;
+  border-radius: 0px 0px 5px 5px;
+  text-align: center;
+  background-color: white;
+  width: 135px;
+  height: 110px;
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    margin-top: 5px;
+    cursor: pointer;
+    color: black;
+    &:hover {
+      color: rgb(128, 178, 209);
+    }
+  }
+}
+@media (max-width: 500px) {
+  .root {
+    margin-top: 3px;
+    button {
+      width: 60px;
+      padding: 5px;
+    }
+    .langCard {
+      top: 30px;
+      width: 60px;
+    }
+    p {
+      display: none;
+    }
+  }
+}

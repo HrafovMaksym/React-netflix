@@ -1,0 +1,19 @@
+.root {
+  background-color: black;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .seeMore {
+    margin-top: 30px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    padding: 8px 20px;
+    align-items: center;
+    border-radius: 3px;
+    font-size: 19px;
+    cursor: pointer;
+  }
+}

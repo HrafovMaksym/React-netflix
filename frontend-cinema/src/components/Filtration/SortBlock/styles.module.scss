@@ -1,0 +1,65 @@
+.root {
+  position: relative;
+  .blockName {
+    font-size: 19px;
+    display: block;
+    // width: 150px;
+    text-align: center;
+    border: solid rgba(255, 255, 255, 0.25) 2px;
+    padding: 3px 35px;
+    color: white;
+    cursor: pointer;
+    color: white;
+    &:hover {
+      color: red;
+    }
+  }
+  .blockInfo {
+    display: block;
+    position: absolute;
+    text-align: center;
+    border-right: solid rgba(255, 255, 255, 0.25) 2px;
+    border-left: solid rgba(255, 255, 255, 0.25) 2px;
+    border-bottom: solid rgba(255, 255, 255, 0.25) 2px;
+    background-color: black;
+
+    color: white;
+    z-index: 10;
+    ul {
+      margin: 0;
+      padding: 0;
+      li {
+        a {
+          color: white;
+          &:hover {
+            color: red;
+          }
+        }
+        color: white;
+        cursor: pointer;
+
+        &:first-child {
+          margin-top: 10px;
+        }
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+@media (max-width: 660px) {
+  .root {
+    .blockName {
+      padding: 3px 15px;
+    }
+  }
+}
+@media (max-width: 565px) {
+  .root {
+    .blockName {
+      display: none;
+    }
+    .blockInfo {
+      display: none;
+    }
+  }
+}

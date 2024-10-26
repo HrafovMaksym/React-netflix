@@ -1,0 +1,42 @@
+.avatarEdit {
+  position: relative;
+
+  .avatar {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    background-color: whitesmoke;
+    fill: black;
+    border-radius: 20px;
+    z-index: 4;
+  }
+  .userAvatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+
+    fill: black;
+    border-radius: 20px;
+    z-index: 4;
+  }
+  .edit {
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #351111;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%);
+
+    svg {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      bottom: 3px;
+      left: 12px;
+    }
+    &:hover {
+      background-color: red;
+    }
+  }
+}

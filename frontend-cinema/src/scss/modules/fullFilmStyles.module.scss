@@ -1,0 +1,200 @@
+html {
+  scroll-behavior: smooth;
+}
+.root {
+  color: white;
+  background-color: black;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background: rgba(14, 14, 14, 0.7);
+    z-index: 2;
+  }
+  .flexTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 60vh;
+  }
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    image-rendering: optimizeQuality;
+    background-position: center;
+    z-index: 1;
+  }
+
+  .titleInfo {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .title {
+    margin: 50px 0 0 0;
+  }
+  .titleDes {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    span {
+      margin: 0 5px 0 5px;
+      color: rgb(209, 209, 209);
+    }
+  }
+  .titleBtns {
+    display: flex;
+
+    gap: 15px;
+    button {
+      font-size: 18px;
+      padding: 7px 10px;
+      cursor: pointer;
+      border-radius: 2px;
+    }
+    .watchBtn {
+      background-color: white;
+      border: 1px solid white;
+    }
+    .addToFav {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background-color: rgb(217, 77, 77);
+      border: 1px solid white;
+      color: white;
+
+      transition: all ease-in-out 0.4s;
+      &:hover {
+        background-color: rgb(175, 19, 19);
+      }
+    }
+  }
+  .shareBtns {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    margin-top: 180px;
+    gap: 15px;
+    button {
+      font-size: 18px;
+      border-radius: 2px;
+
+      width: 100px;
+      height: 39px;
+      text-align: center;
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.695);
+      border: 1px solid rgba(76, 76, 76, 0.551);
+      color: white;
+      transition: all ease-in-out 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      svg {
+        width: 17px;
+        height: 17px;
+      }
+      &:hover {
+        background-color: black;
+      }
+    }
+  }
+}
+.titleOverview {
+  margin: 0 0 10px 0;
+}
+.overview {
+  color: rgb(209, 209, 209);
+  margin-bottom: 40px;
+}
+.nav {
+  display: flex;
+  gap: 25px;
+  p {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    color: rgb(209, 209, 209);
+    cursor: pointer;
+    &:hover {
+      border-bottom: 1px solid red;
+    }
+  }
+  .navList {
+    &.active {
+      cursor: default;
+      border-bottom: 1px solid red;
+      color: white;
+    }
+  }
+}
+@media (max-width: 1025px) {
+  .root {
+    .flexTitle {
+      height: 35vh;
+    }
+  }
+}
+@media (max-width: 850px) {
+  .root {
+    .flexTitle {
+      height: 40vh;
+    }
+  }
+}
+@media (max-width: 780px) {
+  .root {
+    .flexTitle {
+      height: 45vh;
+    }
+  }
+}
+@media (max-width: 750px) {
+  .root {
+    .flexTitle {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .shareBtns {
+      margin-top: 40px;
+    }
+  }
+}
+@media (max-width: 550px) {
+  .root {
+    .flexTitle {
+      height: 50vh;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .root {
+    .flexTitle {
+      height: 70vh;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .root {
+    .titleBtns {
+      button {
+        font-size: 17px;
+        padding: 5px 7px;
+      }
+    }
+  }
+}

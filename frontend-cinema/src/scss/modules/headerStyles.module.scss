@@ -1,0 +1,67 @@
+.header {
+  color: white;
+
+  padding: 15px 0;
+  z-index: 10;
+  &.transparent {
+    background-color: transparent;
+    position: absolute;
+    left: 100px;
+    top: 0;
+  }
+  &.transparent .headerRight {
+    right: -505px;
+    position: absolute;
+  }
+  position: relative;
+  .headerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .headerRight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo {
+    max-width: 130px;
+    width: 130px;
+    fill: red;
+    cursor: pointer;
+  }
+  .headerNav {
+    ul {
+      padding: 0;
+      display: flex;
+      gap: 15px;
+      .active {
+        color: red;
+        cursor: default;
+      }
+      a {
+        color: white;
+        cursor: pointer;
+        transition: all ease-in-out 0.3s;
+        margin-right: 2px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+        &:hover {
+          color: red;
+          border-bottom: 1px solid red;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1050px) {
+  header {
+    .headerNav {
+      display: none;
+    }
+  }
+}

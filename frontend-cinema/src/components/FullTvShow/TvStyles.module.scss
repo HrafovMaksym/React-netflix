@@ -1,0 +1,103 @@
+.root {
+  border-bottom: solid rgba(255, 255, 255, 0.25) 2px;
+  .seasons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    span {
+      border-bottom: 1px solid black;
+      cursor: pointer;
+      &:hover {
+        color: red;
+        border-bottom: 1px solid red;
+      }
+    }
+  }
+  .block {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    max-height: 295px;
+    height: 25px;
+    margin-bottom: 20px;
+    max-width: 190px;
+    text-align: center;
+    align-items: center;
+    padding: 10px 0px 5px 0;
+
+    overflow: auto;
+    &::-webkit-scrollbar {
+      width: 0px;
+      height: 0;
+    }
+    &.active .season {
+      border-top: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    &.active .maxTitle {
+      border-top: 1px solid rgba(255, 255, 255, 0.25);
+    }
+  }
+  .active {
+    height: 260px;
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: white;
+      border-radius: 6px;
+      border: 1px solid white;
+    }
+  }
+
+  .title {
+    text-align: start;
+    padding: 10px 0;
+    cursor: pointer;
+    overflow: scroll;
+  }
+  .seasonsBlock {
+    padding: 0;
+
+    &.visible {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .season {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      border-top: 0px solid rgba(255, 255, 255, 0.25);
+      font-size: 18px;
+      cursor: pointer;
+      padding: 5px 56px;
+    }
+    .maxTitle {
+      padding: 5px 50px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      border-top: 0px solid rgba(255, 255, 255, 0.25);
+      font-size: 18px;
+      cursor: pointer;
+    }
+    li {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+  }
+  .episodeBlock {
+    padding: 0;
+    margin: 0;
+    li {
+      margin-top: 5px;
+      cursor: pointer;
+    }
+  }
+  .film {
+    width: 100%;
+    height: 600px;
+    border: 0px solid black;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+}

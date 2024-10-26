@@ -1,0 +1,200 @@
+.root {
+  .title {
+    border-bottom: solid rgba(255, 255, 255, 0.25) 2px;
+    padding-bottom: 20px;
+  }
+  .public {
+    border-bottom: solid rgba(255, 255, 255, 0.25) 2px;
+    padding-bottom: 60px;
+    background-color: rgba(255, 255, 255, 0.829);
+    color: black;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px white;
+    margin-bottom: 50px;
+    .titlePublic {
+      margin: 20px 0px 30px 0;
+    }
+    .flexPublic {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .textFlex {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+      }
+      // .avatarEdit {
+      //   position: relative;
+
+      //   button {
+      //     position: absolute;
+      //     bottom: 2px;
+      //     right: 0;
+      //     width: 30px;
+      //     height: 30px;
+      //     background-color: #351111;
+      //     clip-path: polygon(100% 0, 100% 100%, 0 100%);
+
+      //     svg {
+      //       width: 15px;
+      //       height: 15px;
+      //       position: absolute;
+      //       bottom: 3px;
+      //       left: 12px;
+      //     }
+      //     &:hover {
+      //       background-color: red;
+      //     }
+      //   }
+      //   .avatar {
+      //     width: 90px;
+      //     height: 90px;
+      //     object-fit: contain;
+      //     background-color: whitesmoke;
+      //     fill: black;
+      //     border-radius: 20px;
+      //     z-index: 4;
+      //   }
+      // }
+
+      button {
+        border: 0px solid black;
+        background-color: rgba(0, 0, 0, 0.264);
+        border-radius: 5px;
+        padding: 1px 5px;
+        margin-left: 20px;
+        cursor: pointer;
+        transition: all ease-in-out 0.3s;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.764);
+        }
+        svg {
+          width: 17px;
+          height: 17px;
+          padding-top: 3px;
+          fill: white;
+        }
+      }
+      .textPublic {
+        span {
+          color: rgb(145, 145, 145);
+        }
+        h2 {
+          margin: 0;
+        }
+      }
+      a {
+        color: black;
+        font-size: 19px;
+        border-bottom: 1px solid rgba(221, 221, 221, 0);
+        transition: all ease-in-out 0.2s;
+        margin-top: 50px;
+        &:hover {
+          border-bottom: 1px solid black;
+        }
+      }
+    }
+  }
+  .private {
+    border-bottom: solid rgba(255, 255, 255, 0.25) 2px;
+    padding-bottom: 60px;
+    background-color: rgba(255, 255, 255, 0.829);
+    color: black;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px white;
+    margin-bottom: 50px;
+    .flexPrivate {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        font-size: 18px;
+        font-weight: 550;
+        border: 0px solid black;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.732);
+        color: white;
+        cursor: pointer;
+        transition: all ease-in-out 0.2s;
+        padding: 4px;
+        width: 100px;
+        &:hover {
+          color: black;
+          background-color: white;
+        }
+      }
+    }
+    .seePass {
+      cursor: pointer;
+      border: 0px solid black;
+      background-color: rgba(0, 0, 0, 0.732);
+      color: white;
+      border-radius: 50%;
+      padding: 1px 5px;
+      margin-right: 10px;
+      margin-left: 2px;
+    }
+    .password {
+      display: flex;
+      position: relative;
+      align-items: center;
+      &.visible input {
+        letter-spacing: normal;
+      }
+      input {
+        background-color: inherit;
+        border: 0px solid black;
+        outline: none;
+        color: black;
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+    }
+    .sumbitPass {
+      display: block;
+      width: 200px;
+      height: 100px;
+      position: absolute;
+      background-color: whitesmoke;
+      border-radius: 2px;
+      top: 21px;
+      left: 50px;
+      padding: 15px 10px 20px 10px;
+      p {
+        font-size: 16px;
+        margin: 0 0 10px 0;
+      }
+      input {
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      button {
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        border-radius: 2px;
+        padding: 5px 10px;
+        border: 1px solid rgba(211, 211, 211, 0.603);
+      }
+    }
+  }
+}
+@media (max-width: 525px) {
+  .root {
+    .public {
+      a {
+        margin-top: 0;
+        margin-bottom: 20px;
+        svg {
+          fill: rgb(44, 44, 44);
+          font-size: 35px;
+        }
+      }
+    }
+  }
+}
